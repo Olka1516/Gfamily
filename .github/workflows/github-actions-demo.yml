@@ -19,3 +19,11 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.x
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      
