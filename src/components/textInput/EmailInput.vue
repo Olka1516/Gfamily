@@ -43,5 +43,6 @@ const isEmailInvalid = () => {
 }
 watch(() => props.modelValue, (data) => {
     userEmail.value = data;
+    console.log("Goodbye");
 })
 </script>
